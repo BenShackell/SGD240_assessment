@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public static class TextureGenerator
 {
+
     public static Texture2D TextureFromColourMap(Color[] colourMap, int width, int height)
     {
         Texture2D texture = new Texture2D(width, height);
@@ -13,6 +13,7 @@ public static class TextureGenerator
         texture.Apply();
         return texture;
     }
+
 
     public static Texture2D TextureFromHeightMap(float[,] heightMap)
     {
@@ -30,4 +31,5 @@ public static class TextureGenerator
 
         return TextureFromColourMap(colourMap, width, height);
     }
+
 }
